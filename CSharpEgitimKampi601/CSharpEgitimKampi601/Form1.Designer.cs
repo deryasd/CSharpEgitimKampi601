@@ -42,9 +42,10 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btnList = new System.Windows.Forms.Button();
             this.btnCustomerCreate = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnGetById = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -164,6 +165,7 @@
             this.btnList.TabIndex = 12;
             this.btnList.Text = "Listele";
             this.btnList.UseVisualStyleBackColor = true;
+            this.btnList.Click += new System.EventHandler(this.btnList_Click);
             // 
             // btnCustomerCreate
             // 
@@ -175,23 +177,25 @@
             this.btnCustomerCreate.UseVisualStyleBackColor = true;
             this.btnCustomerCreate.Click += new System.EventHandler(this.btnCustomerCreate_Click);
             // 
-            // button3
+            // btnDelete
             // 
-            this.button3.Location = new System.Drawing.Point(182, 397);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(232, 38);
-            this.button3.TabIndex = 14;
-            this.button3.Text = "Sil";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnDelete.Location = new System.Drawing.Point(182, 397);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(232, 38);
+            this.btnDelete.TabIndex = 14;
+            this.btnDelete.Text = "Sil";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // button4
+            // btnUpdate
             // 
-            this.button4.Location = new System.Drawing.Point(182, 441);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(232, 38);
-            this.button4.TabIndex = 15;
-            this.button4.Text = "Güncelle";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnUpdate.Location = new System.Drawing.Point(182, 441);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(232, 38);
+            this.btnUpdate.TabIndex = 15;
+            this.btnUpdate.Text = "Güncelle";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // dataGridView1
             // 
@@ -203,14 +207,25 @@
             this.dataGridView1.Size = new System.Drawing.Size(941, 369);
             this.dataGridView1.TabIndex = 16;
             // 
+            // btnGetById
+            // 
+            this.btnGetById.Location = new System.Drawing.Point(182, 485);
+            this.btnGetById.Name = "btnGetById";
+            this.btnGetById.Size = new System.Drawing.Size(232, 38);
+            this.btnGetById.TabIndex = 17;
+            this.btnGetById.Text = "Id\'ye Göre Getir";
+            this.btnGetById.UseVisualStyleBackColor = true;
+            this.btnGetById.Click += new System.EventHandler(this.btnGetById_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1383, 541);
+            this.Controls.Add(this.btnGetById);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnCustomerCreate);
             this.Controls.Add(this.btnList);
             this.Controls.Add(this.txtCustomerShoppingCost);
@@ -249,9 +264,10 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnList;
         private System.Windows.Forms.Button btnCustomerCreate;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnGetById;
     }
 }
 
